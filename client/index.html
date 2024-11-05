@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Оценока</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="application">
+            <div id="uploadPart" class="uploadPart">
+                <div class="topText">Загрузить файл в систему</div>
+                <input type="file" id="file_upload" onchange="upload_file(this)">
+                
+                <div id="uploadInfo" calss="uploadInfo"></div>
+                
+                <button id="goToReviewPage" onclick="get_file_names()">Взять на оценку</button>
+            </div>
+    
+            <div id="reviewPart" class="reviewPart" style="display:none">
+                <div class="reviewRow">
+                    <div class="reviewButtons">
+                        <button id="getFile1" onclick="load_file(`fileName1`)">Первый файл</button>
+                        <button id="getFile2" onclick="load_file(`fileName2`)">Второй файл</button>
+                        <button id="getFile3" onclick="load_file(`fileName3`)">Третий файл</button>
+                    </div>
+                </div>
+
+                <div id="reviewInfo" class="reviewInfo"></div>
+
+                <div class="reviewFields">
+                    <iframe id="iframe" class="reviewIframe" src=""></iframe>
+
+                    <div class="userInputWindow">
+                        <textarea id="review" class="riviewTextarea" placeholder="Введите отзыв"></textarea>
+                        <div class="rating">
+                            <div style="margin-right: 10px; font-weight: 600"> оценка: </div>
+                            <select id="rating">
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviewRow">
+                    <div class="reviewButtons">
+                        <button id="send_review" onclick="send_review()">Отпраивть оценку</button>
+                        <button id="goToUploadPage" onclick="goToUpload()">Вернуться к отправке файлов</button>
+                        <button id="showReviewTable" onclick="get_reviews()">Показать таблицу оценок</button>
+                    </div>
+                </div>
+                <div id="reviewTable">
+
+                </div>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>

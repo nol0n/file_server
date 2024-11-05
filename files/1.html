@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Оценочка</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <div class="top_text">Загрузить свой файл</div>
+        <input type="file" id="file_upload" onchange="sendFile(this)">
+        <div id="uploadResult"></div>
+        <button id="getReviewPage" onclick="loadFiles()">Загрузить файлы для оценки</button>
+
+        <iframe id="iframe1" src="" sandbox="allow-scripts allow-scripts allow-downloads"></iframe>
+        <textarea id="review1" placeholder="Введите отзыв"></textarea>
+        <select id="rating1">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+
+        <!-- <iframe id="iframe2" src="https://www.example.com"></iframe>
+        <textarea id="review2" placeholder="Введите отзыв"></textarea>
+        <select id="rating2">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+
+        <iframe id="iframe3" src="https://www.example.com"></iframe>
+        <textarea id="review3" placeholder="Введите отзыв"></textarea>
+        <select id="rating3">
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+
+        <button onclick="submitReviews()">Отправить</button> -->
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
